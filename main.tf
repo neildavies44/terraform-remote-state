@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "remote_state" {
   bucket = "${var.prefix}-${var.environment}"
   acl    = "authenticated-user"
 
-  versioning = {
+  versioning {
     enabled = true
   }
 
